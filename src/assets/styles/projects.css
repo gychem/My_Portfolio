@@ -1,0 +1,353 @@
+#projects_container {
+    padding: 20px;
+    background-color: #393E46;
+    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    color: white;
+    min-width: 25%;
+    position: relative;
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card_title {
+    background-color: #0D0D0D;
+    position: absolute;
+    color: #bab8b8;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 10px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card img{
+    color: white;
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;  
+}
+
+.card:hover {
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px; 
+}
+
+.card:hover .card_title {
+    cursor: pointer;
+    display: block;
+    z-index: 5;
+}
+
+.card:hover img{
+    filter: blur(2px);
+}
+
+.card:active {
+    transform: translateY(-1px);
+}
+
+#project {
+    margin: 20px;
+    display: none;
+}
+
+
+#projectviewer {
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+}
+
+#projectviewer_prevNext {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: calc(100% - 54px);
+    margin-top: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding-right: 54px;
+}
+
+#projectviewer_prevNext button {
+    background-color: #0D0D0D;
+    font-family: 'Roboto', sans-serif;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    color:#737373;
+    cursor: pointer;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#projectviewer_prevNext button:hover {
+    background-color: #1b1b1b;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    color:#bab8b8;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#projectviewer_prevNext button:active {
+    transform: translateY(-1px);
+}
+
+
+#iframe {
+    background-color: #FFF;
+    border-radius: 5px; 
+    border: 0;
+    width: 100%;
+}
+
+#iframeContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px; 
+}
+
+#side_buttons {
+    margin-top: 5px;
+}
+
+#side_buttons a {
+    text-decoration: none;
+    width: 5%;
+}
+
+#goBack {
+    background-color: #141414;
+    border-radius: 300px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    color: black;
+    padding: 6px 5px 7px 6px;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+
+#goBack:hover {
+    background-color: #2E3235;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#info {
+    background-color: #00ADB5; 
+    border-radius: 300px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    color: white;
+    font-family: robotic;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#info:hover {
+    background-color: #55c0c5;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+/* Chrome, safari */
+*::-webkit-scrollbar {
+	background-color: #141414;
+    width: 10px;
+    border: 0;
+    
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #313131;
+    width: 10px;
+    border: 0;
+}
+
+/* Firefox */
+.selector {
+    scrollbar-width: 5px;
+}
+
+
+#alert_overlay {
+    display: none;
+    background-color: rgb(0, 0, 0, 0.8);
+    position: absolute;
+    border-radius: 5px;
+    min-width: calc(100% - 0px);
+    min-height: calc(100% - 3px);
+    justify-content: center;
+    align-items: center;
+}
+
+
+#alert_message {
+    background-color: #141414;
+    border-radius: 5px;
+    color: #bab8b8;
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#alert_message button {
+    background-color: #303030;
+    font-family: 'Roboto', sans-serif;
+    border: 0;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    color:#737373;
+    cursor: pointer;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#alert_message button:hover {
+    box-shadow: #737373 0px 0px 2px 0px;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#alert_message button:active {
+    transform: translateY(1px);
+}
+
+#info_container {
+    position: absolute;
+    background-color: #00ADB5; 
+    padding: 10px;
+    color: #141414;
+    right: 0;
+    margin-right: 60px;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+#info_container header {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+#info_container #languages {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+#language {
+    padding: 5px;
+    border-radius: 5px;
+    display:inline-block;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.html {
+    background-color: #E54E26;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.css {
+    background-color: #274DE5;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.php {
+    background-color: #6181B5;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.javascript {
+    background-color: #F7DF1E;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.vue {
+    background-color: #40B983;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.laravel {
+    background-color: #000000;
+    color: #FF2D20;
+    text-transform: capitalize;
+}
+
+.mysql {
+    background-color: #c5c5c5;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    #side_buttons {
+        background: rgb(255, 255, 255, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        right: 0;
+        margin-right: 40px;
+        margin-top: 10px;
+    }
+
+    #projectviewer_prevNext {
+        width: 100%;
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+    
+
+}

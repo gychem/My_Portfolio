@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    background-color: #393E46;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    background-color: #141414;
+    padding: 10px;
+    min-width: 200px;
+    min-height: calc(100vh - 20px);
+    height: calc(100% - 20px);
+}
+
+
+#logo-text {
+    font-family: 'Ms Madi', cursive;
+    color: #FFFFF0;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    border-top: 2px solid #212121; 
+}
+
+nav ul li {
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border-bottom: 2px solid #212121; 
+    text-align: center;
+}
+
+nav ul li:hover {
+    color: #bab8b8;
+}
+
+ nav ul li:active {
+    transform: translateY(1px);
+} 
+
+.active * {
+    color: #bab8b8;
+    border-top: 2px solid #00ADB5;
+    border-bottom: 2px solid #00ADB5; 
+}
+
+nav ul a {
+    text-decoration: none;
+    color:#737373;
+}
+
+main {
+    min-width: calc(100% - 220px);
+}
+
+#sidebar_icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+#sidebar_icons #icon {
+    filter: opacity(0.3);
+    color: black;
+}
+
+#sidebar_icons #icon:hover {
+    filter: opacity(0.6);
+}
+
+
+footer {
+    background-color: #0d0d0d;
+    color:#737373;
+    text-align: center;
+    font-size: 12px;
+    min-width: 220px;
+    position: fixed;
+    bottom: 0; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    #app {
+        display: block;
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+
+    nav {
+        min-height: 0px;
+        height: auto;
+        padding-bottom: 0px;
+    }
+
+    nav ul {
+        display: flex; 
+    }
+
+    #sidebar_icons {
+        position: absolute;
+        right: 0;
+        margin-right: 13px;
+        margin-top: -35px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    #sidebar_icons {
+        margin-top: -75px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+}

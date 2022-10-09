@@ -1,0 +1,191 @@
+#contact {
+    display: flex;
+    justify-content:center;
+    margin: 20px;
+}
+
+#contact_title_container {
+    display: flex;
+    justify-content:center;
+    margin-top: -5px;
+}
+
+
+#contact_title {
+    font-family: Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color:#737373;
+    margin-bottom: 5px;
+}
+
+#contact__form { 
+    margin-top: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #141414;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+#contact_map { 
+    border-radius: 5px;
+    background-color: #141414;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 0px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#contact_map iframe { 
+    border-radius: 5px;
+}
+
+
+fieldset {
+    border: 0;
+    margin: 0;
+
+}
+
+label {
+    margin-top: 10px;
+    color: #fffff0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+input, textarea {
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 0px;
+    outline: 0px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fffff0;
+    color: #141414;
+    -webkit-appearance: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #141414 inset !important;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: #141414 !important;
+}
+
+input:active {
+    background-color: #141414;
+}
+
+
+
+#contact button {
+    background-color: #303030;
+    color: #737373;
+    padding: 10px;
+    border: 0px;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#contact button:hover {
+    background-color: #1b1b1b;
+    color: #bab8b8;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+
+}
+
+#contact button:active {
+    transform: translateY(1px);
+}
+
+
+@media only screen and (max-width: 700px) {
+    #contact {
+        display: block;
+    }
+
+    #contact__form { 
+        border-radius: 5px;
+    }
+
+    #contact_map { 
+        height: 400px;
+    }
+}
+
+.blinking-cursor {
+    margin-bottom: 10px;
+    font-weight: 100;
+    font-size: 45px;
+    color: #141414;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #141414;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #141414;
+    }
+  }
+  
+  @-webkit-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #141414;
+    }
+  }
+  
+  @-ms-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #141414;
+    }
+  }
+  
+  @-o-keyframes "blink" {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: #141414;
+    }
+  }
