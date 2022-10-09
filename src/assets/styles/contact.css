@@ -11,6 +11,7 @@
 }
 
 
+
 #contact_title {
     font-family: Helvetica, sans-serif;
     font-size: 25px;
@@ -30,9 +31,41 @@
     padding-right: 20px;
 }
 
+#contact #success {
+    background-color: #00ADB5;
+    padding: 10px 5px 10px 5px;
+    border-top-left-radius: 5px;
+    text-align: center;
+    margin-top: -10px;
+    margin-right: -20px;
+    margin-bottom: 10px;
+    color: #333;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#contact #error {
+    background-color: rgb(166, 112, 112);
+    padding: 10px 5px 10px 5px;
+    border-top-left-radius: 5px;
+    text-align: center;
+    margin-top: -10px;
+    margin-right: -20px;
+    margin-bottom: 10px;
+    color: #333;
+    -moz-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+
 #contact_map { 
     border-radius: 5px;
     background-color: #141414;
+
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 0px;
     margin-top: 15px;
@@ -109,7 +142,6 @@ input:active {
     -webkit-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
-
 }
 
 #contact button:active {
@@ -126,6 +158,16 @@ input:active {
         border-radius: 5px;
     }
 
+    #contact #success {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #contact #error {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    
     #contact_map { 
         height: 400px;
     }
