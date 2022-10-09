@@ -76,7 +76,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #141414 inset !important;
+     -webkit-box-shadow: 0 0 0 30px #fffff0 inset !important; 
 }
 
 input:-webkit-autofill{
@@ -84,10 +84,8 @@ input:-webkit-autofill{
 }
 
 input:active {
-    background-color: #141414;
+    background-color: #fffff0;
 }
-
-
 
 #contact button {
     background-color: #303030;
