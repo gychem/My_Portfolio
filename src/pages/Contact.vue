@@ -8,9 +8,11 @@
     <div id="contact">
 
         <div>
-            <span id="contact_title"></span>
+    
             <div id="contact__form">
-                <form id="contactForm" class="form" @submit.prevent="submit">
+                <div id="success" v-if="success">Your message has been successfully sent !</div>
+                <div id="error" v-if="error != false">{{ error }}</div>
+                <form id="contactForm" class="form" @submit.prevent="submit" novalidate>
                     <div class="error-message">
                         <!-- <p v-show="!email.valid">Oh, please enter a valid email address.</p> -->
                     </div>
@@ -38,12 +40,18 @@
 
   export default {
     name: "App",
-    data() {
+    data() { 
       return {
+        success: false,
+        error: false,
         name: "",
         email: "",
         message: "",
       };
+    },
+    mounted() {
+        this.success = false;
+        this.error = false;
     },
     computed: {
       formValid() {
@@ -65,35 +73,46 @@
         submit() 
         {
             if (!this.formValid) {
-            return;
+                this.success = false;
+                this.error = 'Form contains empty or invalid fields!';
+                return;
             }
 
             const { name, email, message } = this;
             let input = {name, email, message};
-            console.log(input)
 
             let emailMessage = {  
-            "sender":{  
-                "name": input['name'],
-                "email": input['email']
-            },
-            "to":[  
-                {  
-                    "email":"gychem.baert@hotmail.com",
-                    "name":"Gychem Baert"
-                }
-            ],
-            "subject":"Contact form - Gychem.be",
-            "htmlContent":`<html><head></head><body><p>${input['message']}</p></body></html>`
+                "sender":{  
+                    "name": input['name'],
+                    "email": input['email']
+                },
+                "to":[{  
+                        "email":"gychem.baert@hotmail.com",
+                        "name":"Gychem Baert"
+                    }
+                ],
+                "subject":"Contact message from gychem.be portfolio",
+                "htmlContent":`<html><head></head><body><p>${input['message']}</p></body></html>`
             }
                         
             const headers = { 
-            'accept': 'application/json',
-            'api-key': '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',
-            'content-type': 'application/json'
+                'accept': 'application/json',
+                'api-key': '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',
+                'content-type': 'application/json'
             };
-        axios.post("https://api.sendinblue.com/v3/smtp/email", emailMessage, { headers })
-          .then(response => this.articleId = response.data.id);
+
+            axios.post("https://api.sendinblue.com/v3/smtp/email", emailMessage, { headers })
+            .then(response => {
+                console.log(response.data);
+                this.success = true;
+                this.error = false;
+            }).catch((error) => {
+                this.success = false;
+                this.error = 'Sorry, something went wrong ! Please try again later.';
+                console.log(error);
+            })
+            
+            
       },
     },
   };
