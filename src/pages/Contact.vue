@@ -97,7 +97,7 @@
                         
             const headers = { 
                 'accept': 'application/json',
-                'api-key': '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',
+                'api-key': '',
                 'content-type': 'application/json'
             };
 
