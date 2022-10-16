@@ -1,46 +1,8 @@
-# TODO -> PRIORITY FEATURES
+# My Portfolio
+## Introduction
+This repository contains my personal portfolio. <br>
+I made my portfolio to showcase live versions of some projects that I've made. <br><br>
+Click <a href="https://www.gychem.be">here</a> to open my Portfolio.
 
-[PROJECTS] i info knop functioneel maken
-[Artworks] Add as project (logo's, menu de nijl, ...)
-[WeatherAPI] Update default location to Ghent
-[PirateMaze] Update page title to Pirate Maze Hunter
-[PiratePacman] Make movements smoother
-[Laravel-CMS] ADD Project
-[AHIRU] ADD Project
-[FOOD-ORDER-CHECKOUT] Improve responsiveness
-
-# TODO -> NON PRIORITY FEATURES
-[CONTACT] Onderwerp toevoegen aan contact message 
-[PROJECTS] Zoekfunctie toevoegen aan projecten
-[ABOUT] Infinite marquee slider for icons
-[ABOUT] add NodeJS icon to marquee
-
-
-
-
-
-
-NEW HOME STRUCTURE
-----------------------------------------------------
-ABOUT WITH SKILLS AND MORE
-
-PROJECTS WITH SLIDER AND OPENS PROJECT PAGE ON CLICK
-
-TIMELINE
-
-DOWNLOAD MY RESUME
-
-CONTACT
-
-
-NAV STRUCTURE
---------------------------------------------------
-ABOUT
-PROJECTS
-TIMELINE
-RESUME
-CONTACT
-
-
-
-Add more skills: Gitlab, Github
+<hr>
+<img src="https://user-images.githubusercontent.com/83142502/196009951-8bded9dc-da0e-4b13-affb-e5e1da6eec87.png">
