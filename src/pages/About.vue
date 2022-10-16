@@ -7,26 +7,27 @@
         </div> -->
 
         <div>
+            <span id="about_title">Hey, Welcome to my portfolio!</span> 
             <div id="about__container">
-                <span id="about_title">ABOUT</span>
                 <p>
-                    Hey, my name is Gychem and I am a passionate web developer.<br><br>
+                    My journey as a web developer started as a hobby in 2008. <br><br>
+                    During the years I've learned to work with several languages, frameworks and methodologies.<br>
+                    I was part of multiple projects, did some freelance work and maintained/configurated game servers & basic hosting solutions.<br><br>
 
-                    My journey as a developer started in 2008.<br>
-                    I've worked with several languages, frameworks and methodologies.<br><br>
-
-                    During the years I was part of many projects, did some freelance work <br>
-                    and maintained & created private servers for games in<br>
-                    Node.js, TypeScript, MySQL and Pawn.<br><br>
-
-                    After all those years I decided to go for a professional career as a web developer. <br>
-                    I followed a 7 month training at BeCode where I learned everything about the latest frameworks and coding standards.
+                    I have listed some demo's of my latest work on the projects page.<br><br>
+                    Want to get in touch? Contact me via LinkedIn or the contact page.
                 </p>
-
             </div>
         </div>
 
-        <!-- <TimeLine /> -->
+        <div>   
+            <span id="about_title">Projects</span> 
+            <div id="about_marquee_container">
+                <Vue3Marquee :pauseOnHover="true">
+                    <router-link to="/Projects"><img height="150" class="image" :key="project.id" v-for="project in projects" :src="project.image"/></router-link>
+                </Vue3Marquee>
+            </div>
+        </div> 
 
         <div>   
             <div id="about_marquee_container">
@@ -34,25 +35,27 @@
                     <img :src="img" v-for="img in imgArray" :key="img" class="image" width="100" />
                 </Vue3Marquee>
             </div>
-        </div> 
+        </div>
 
     </div>
 
 </template>
 
 <script>
-    import { Vue3Marquee } from 'vue3-marquee'
-    //import TimeLine from '@/components/TimeLine.vue'
-    import 'vue3-marquee/dist/style.css'
+    import {projects} from '../projects.js';
+    import { Vue3Marquee } from 'vue3-marquee';
+    import 'vue3-marquee/dist/style.css';
+   // import TimeLine from '../components/TimeLine.vue';
 
     export default {
         name: "AboutPage",
         components: {
             Vue3Marquee,
-            //TimeLine,
+         //   TimeLine,
         },
         data() {
             return {
+                projects: projects,
                 imgArray: [
                     "assets/icons/html5.svg",
                     "assets/icons/css3.svg",
