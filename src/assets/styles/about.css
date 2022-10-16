@@ -1,34 +1,3 @@
-#used_languages button {
-    border-radius: 5px;
-    font-weight: 600;
-    border: 0;
-}
-
-#used_languages #button_html {
-    background-color: #E44D26;
-    color: #FFFFFF;
-}
-
-#used_languages #button_css {
-    background-color: #304CDC;
-    color: #FFFFFF;
-}
-
-#used_languages #button_javascript {
-    background-color: #F0DB4F;
-    color: #323330;
-}
-
-#used_languages #button_php {
-    background-color: #4F5B93;
-    color: #FFFFFF;
-}
-
-#used_languages #button_mysql {
-    background-color: #FFFFFF;
-    color: #01618B;
-}
-
 #about {
     max-width: 100%;
     display: flex;
@@ -42,12 +11,11 @@
     color:#838282;
 }
 
-
 #about_title {
     font-family: Helvetica, sans-serif;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 600;
-    color:rgb(186, 184, 184,0.1);
+    color:rgb(186, 184, 184,1);
 }
 
 #used_languages {
@@ -56,16 +24,8 @@
     filter: opacity(0.1);
 }
 
-/* .vue3-marquee {
-    background-color: rgb(20, 20, 20);
-    color: #FFFFF0;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    padding: 20px;
-    max-width: calc(100%-20px);
-    border-radius: 5px;
-} */
-
 #about_marquee_container { 
+    margin-top: 10px;
     background-color: rgb(20, 20, 20);
     color: #FFFFF0;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -74,8 +34,8 @@
     border-radius: 5px;
 }
 
-
 #about__container { 
+    margin-top: 10px;
     background-color: rgb(20, 20, 20);
     color: #FFFFF0;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
