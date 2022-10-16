@@ -16,8 +16,8 @@
         </div>
 
         <ul>
-            <!-- <router-link to="/"><li>About</li></router-link> -->
-            <router-link to="/"><li>Projects</li></router-link>
+            <router-link to="/"><li>About</li></router-link>
+            <router-link to="/Projects"><li>Projects</li></router-link>
             <router-link :key="$route" to="/contact"><li>Contact</li></router-link>
         </ul>
 
